@@ -58,7 +58,7 @@
 
                 $('#save').text('تعديل');
 
-                $('#titleOfModel').text(' تعديل الباقه');
+                $('#titleOfModel').text(' تعديل المعلومات');
 
                 $('#formSubmit')[0].reset();
 
@@ -66,6 +66,8 @@
 
                 $('#about_office').val(data.about_office);
                 $('#about_office_en').val(data.about_office_en);
+                $('#our_vision').val(data.our_vision);
+                $('#our_vision_en').val(data.our_vision_en);
                 $('#id').val(data.id);
             }
         });

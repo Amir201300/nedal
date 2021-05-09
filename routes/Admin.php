@@ -81,6 +81,26 @@ Route::prefix('Admin')->group(function () {
             Route::get('/show/{id}', 'MassagesController@show')->name('Contact_form.show');
 
         });
+
+        /** Sliders */
+        Route::prefix('Sliders')->group(function () {
+            Route::get('/index', 'SlidersController@index')->name('Sliders.index');
+            Route::get('/allData', 'SlidersController@allData')->name('Sliders.allData');
+            Route::post('/create', 'SlidersController@create')->name('Sliders.create');
+            Route::get('/edit/{id}', 'SlidersController@edit')->name('Sliders.edit');
+            Route::post('/update', 'SlidersController@update')->name('Sliders.update');
+            Route::get('/destroy/{id}', 'SlidersController@destroy')->name('Sliders.destroy');
+        });
+
+        /** Lawyers */
+        Route::prefix('Lawyers')->group(function () {
+            Route::get('/index', 'LawyersController@index')->name('Lawyers.index');
+            Route::get('/allData', 'LawyersController@allData')->name('Lawyers.allData');
+            Route::post('/create', 'LawyersController@create')->name('Lawyers.create');
+            Route::get('/edit/{id}', 'LawyersController@edit')->name('Lawyers.edit');
+            Route::post('/update', 'LawyersController@update')->name('Lawyers.update');
+            Route::get('/destroy/{id}', 'LawyersController@destroy')->name('Lawyers.destroy');
+        });
 });
 });
 

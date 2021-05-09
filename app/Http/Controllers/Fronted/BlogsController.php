@@ -32,11 +32,6 @@ class BlogsController extends Controller
         }
     }
 
-    public function singleService($Id){
-        $blog = Services::where('id',$Id)->first();
-        if (!is_null($blog)) {
-            return view('Fronted.Blog.singleServices',compact('blog'));
-        }
-    }
+
 
 }

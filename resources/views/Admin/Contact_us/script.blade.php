@@ -60,7 +60,7 @@
 
                 $('#save').text('تعديل');
 
-                $('#titleOfModel').text(' تعديل الباقه');
+                $('#titleOfModel').text(' تعديل المعلومات');
 
                 $('#formSubmit')[0].reset();
 

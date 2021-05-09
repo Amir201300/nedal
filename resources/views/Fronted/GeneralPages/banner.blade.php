@@ -1,11 +1,16 @@
+@php
+    $slider = App\Models\Sliders::all();
+@endphp
+<div class="content">
 
-    <div class="slider">
-        <div class="imageSlider">
-            <img src="/Fronted/images/slider.png">
-            <div class="textSlider">
-                <h3>{{trans('nedal.cit')}}</h3>
-                <h1>{{trans('nedal.zien')}}</h1>
-             <a href="{{route('General.about')}}">  <button class="more">{{trans('nedal.more')}}</button></a>
-            </div>
-        </div>
-    </div>
+    <!-----slider-->
+
+
+
+    <ul id="demo1">
+        @foreach($slider as $row)
+        <li><div class="slidelink"><a href="#"> <div class="overslide"></div><img src="/images/Sliders/{{$row->image}}" /></a> </div></li>
+        @endforeach
+
+    </ul>
+</div>

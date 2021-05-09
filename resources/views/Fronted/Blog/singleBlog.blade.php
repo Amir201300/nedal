@@ -9,29 +9,29 @@
 @endsection
 
 @section('content')
-    <div class="image_section">
-        <div class="section_background">
-            <div class="img_background" >
-                <img style="width: 741px ;height: 465px" src="/images/Blog/{{$blog->image}}" >
-            </div>
-        </div>
-    </div>
-    <div class="content_section container">
-        <div class="row">
-            @if(getLang() == 'ar')
-            <div class="col-md-12">
-                <div class="col-md-6"><h1>{{$blog->title}}</h1></div>
-            </div>
-            @else
-                <div class="col-md-12">
-                    <div class="col-md-6"><h1>{{$blog->title_en}}</h1></div>
+    <div class="container">
+        <div class="page about">
+
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="text">
+                        <h2 class="h3">{{$blog->title}}</h2>
+                        <p>
+                        {{$blog->content}}
+
+                        </p>
+
+
+                    </div>
                 </div>
-                @endif
-                @if(getLang() == 'ar')
-                    <p>{{$blog->content}}</p>
-                @else
-                    <p>{{$blog->content_en}}</p>
-                @endif
+                <div class="col-md-3">
+                    <img src="/images/Blog/{{$blog->image}}" class="img-fluid">
+                </div>
+
+            </div>
+
+
+
         </div>
     </div>
 @endsection

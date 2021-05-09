@@ -68,6 +68,8 @@ class AboutController extends Controller
         }
         $About->about_office=$request->about_office;
         $About->about_office_en=$request->about_office_en;
+        $About->our_vision=$request->our_vision;
+        $About->our_vision_en=$request->our_vision_en;
         $About->save();
     }
 

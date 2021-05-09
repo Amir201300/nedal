@@ -90,6 +90,10 @@ class ServiceController extends Controller
             deleteFile('Services',$Services->logo);
             $Services->logo=saveImage('Services',$request->logo);
         }
+        if($request->image) {
+            deleteFile('Services_image',$Services->image);
+            $Services->image=saveImage('Services_image',$request->image);
+        }
         $Services->save();
     }
 
@@ -118,6 +122,7 @@ class ServiceController extends Controller
      */
     private function deleteRow($Services){
         deleteFile('Services',$Services->logo);
+        deleteFile('Services_image',$Services->image);
         $Services->delete();
     }
 
@@ -142,6 +147,10 @@ class ServiceController extends Controller
             $image = '<a href="'. getImageUrl('Services',$data->logo).'" target="_blank">'
                 .'<img  src="'. getImageUrl('Services',$data->logo) . '" width="50px" height="50px"></a>';
             return $image;
-        })->rawColumns(['action' => 'action','checkBox'=>'checkBox','logo'=>'logo'])->make(true);
+        })->editColumn('image', function ($data) {
+            $image = '<a href="'. getImageUrl('Services_image',$data->image).'" target="_blank">'
+                .'<img  src="'. getImageUrl('Services_image',$data->image) . '" width="50px" height="50px"></a>';
+            return $image;
+        })->rawColumns(['action' => 'action','checkBox'=>'checkBox','logo'=>'logo','image'=>'image'])->make(true);
     }
 }

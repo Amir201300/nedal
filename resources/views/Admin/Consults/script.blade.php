@@ -29,8 +29,8 @@
             {data: 'checkBox', name: 'checkBox'},
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},
-            {data: 'phone', name: 'phone'},
             {data: 'email', name: 'email'},
+            {data: 'type', name: 'type'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
     });
@@ -56,7 +56,7 @@
 
                 $('#name').text(data.name);
                 $('#email').text(data.email);
-                $('#phone').text(data.phone);
+                $('#type').text(data.type);
                 $('#topic').text(data.topic);
                 $('#id').text(data.id);
             }

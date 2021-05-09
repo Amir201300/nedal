@@ -16,10 +16,7 @@
                             <p class="main valueModal" id="name"></p>
                         </div>
 
-                        <div class="col-md-6 showDetilse">
-                            <h5><span class="btn-label"><i class=" icon-Hand-TouchSmartphone"></i></span> رقم الهاتف</h5>
-                            <p class="main valueModal" id="phone"></p>
-                        </div>
+
                         <div class="col-md-12 showDetilse">
                             <h5><i class="icon-Email"></i>البريد الالكتروني</h5>
                             <p class="main valueModal" id="email"></p>
@@ -27,6 +24,11 @@
                         <div class="col-md-12 showDetilse">
                             <h5><i class="icon-User"></i>الاستشاره المطلوبه</h5>
                             <p class="status valueModal" id="topic"></p>
+                        </div>
+
+                        <div class="col-md-6 showDetilse">
+                            <h5><i class="icon-Block-Cloud"></i>منطقه الممارسات</h5>
+                            <p class="main valueModal" id="type"></p>
                         </div>
 
 

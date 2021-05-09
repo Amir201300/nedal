@@ -29,6 +29,7 @@
             {data: 'checkBox', name: 'checkBox'},
             {data: 'id', name: 'id'},
             {data: 'logo', name: 'logo'},
+            {data: 'image', name: 'image'},
             {data: 'service_name', name: 'service_name'},
             {data: 'service_name_en', name: 'service_name_en'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
@@ -60,7 +61,7 @@
 
                 $('#save').text('تعديل');
 
-                $('#titleOfModel').text(' تعديل الباقه');
+                $('#titleOfModel').text(' تعديل الخدمه');
 
                 $('#formSubmit')[0].reset();
 

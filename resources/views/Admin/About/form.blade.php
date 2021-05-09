@@ -33,6 +33,20 @@
                             </div>
                         </div>
 
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="example-email">رؤيتنا  </label>
+                                <textarea type="text" id="our_vision" name="our_vision"  class="form-control"  required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="example-email">رؤيتنا بالانجليزيه</label>
+                                <textarea type="text" id="our_vision_en" name="our_vision_en"  class="form-control"  required></textarea>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div id="err"></div>

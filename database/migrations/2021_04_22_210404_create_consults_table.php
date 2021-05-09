@@ -19,6 +19,7 @@ class CreateConsultsTable extends Migration
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->text('topic')->nullable();
+            $table->string('type');
             $table->timestamps();
         });
     }

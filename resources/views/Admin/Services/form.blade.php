@@ -12,21 +12,28 @@
                 <div class="modal-body">
                     <div class="row">
 
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label for="example-email"> صوره </label>
+                                <label for="example-email"> الشعار </label>
                                 <input type="file" id="logo" name="logo"  class="form-control"   >
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="example-email"> الصوره الداخليه </label>
+                                <input type="file" id="image" name="image"  class="form-control"   >
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="example-email">اسم الخدمه</label>
                                 <input type="text" id="service_name" name="service_name" required class="form-control"   >
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="example-email">اسم الخدمه بالانجليزيه</label>
                                 <input type="text" id="service_name_en" name="service_name_en" required class="form-control"   >

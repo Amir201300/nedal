@@ -4,76 +4,44 @@
 @extends('Fronted.layouts.master')
 
 @section('title')
-<<<<<<< HEAD
     {{trans('nedal.legal_advice')}}
-=======
-    المدونة
->>>>>>> 1034e76b31867aad06a845b873c013665204d551
+
 @endsection
 
 @section('content')
-    <div class="image_section">
-        <div class="section_background serveces_back">
-            <input id="tab-1" type="radio" name="tabs" checked>
-            <label for="tab-1" class="">
-                <div class="img_background tab" >
-                    <img src="/images/Blog/{{$blogs->image}}" >
-                </div>
-            </label>
-
-            <div class="content">
-                <div id="content-1">
-                    <div class="content_section container">
-                        <div class="row">
-                            @if(getLang() == 'ar')
-                            <div class="col-md-4">
-                                <h1 class="header_serv">{{$blogs->title}}</h1>
-                            </div>
-                            @else
-                                <div class="col-md-4">
-                                    <h1 class="header_serv">{{$blogs->title_en}}</h1>
-                                </div>
-                            @endif
-                            @if(getLang() == 'ar')
-                            <div class="col-md-8">
-                                <p>{{$blogs->content}}</p>
-                          <a href="{{route('blog.singleBlog',$blogs->id)}}"> <button class="moreService">{{trans('nedal.more')}}</button> </a>
-                            </div>
-                                @else
-                                    <div class="col-md-8">
-                                        <p>{{$blogs->content_en}}</p>
-                                        <a href="{{route('blog.singleBlog',$blogs->id)}}"> <button class="moreService">{{trans('nedal.more')}}</button> </a>
-                                    </div>
-                                @endif
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-    <div class="serv">
+    <div class="market">
         <div class="container">
+
+
+            <div class="section_title text-center">
+                <h3><img src="/Fronted/img/heading_icon.png">
+                    <br />
+                    {{trans('nedal.legal_advice')}} </h3>
+
+            </div>
+
             <div class="row">
-                @foreach($blog as $row)
+
+            @foreach($blog as $row)
                 <div class="col-md-4">
-                    <img src="/images/Blog/{{$row->image}}">
-                    @if(getLang() == 'ar')
-                    <p>{{$row->title}}</p>
-                    @else
-                        <p>{{$row->title_en}}</p>
-                    @endif
-                    <div class="viewMoreBtn">
-                   <a href="{{route('blog.singleBlog',$row->id)}}" ><button >{{trans('nedal.more')}}</button></a>
-                    </div>
+                    <div class="item">
+                        <div class="pic"> <img src="/images/Blog/{{$row->image}}" class="img-fluid" ></div>
+                        <div class="title"><h4>{{$row->title}}</h4></div>
+                        <div class="clear"></div>
+                        <div class="details"> <li><i class="fas fa-calendar-minus"></i>  21/3/2021</li> <li><i class="fas fa-users"></i>  المصاريف والتمويل</li> </div>
+                        <div class="clear"></div>
+
+                        <p>{{substr($row->content,0,100)}}</p>
+
+
+                  <a href="{{route('blog.singleBlog',$row->id)}}"  class="btn-primary"><i class="fas fa-plus"></i> {{trans('nedal.more')}}</a>                  </div>
                 </div>
-                    @endforeach
+                @endforeach
+
             </div>
         </div>
-    </div>
 
-    @include('Fronted.GeneralPages.homeAbout')
+    </div>
 
 @endsection
 

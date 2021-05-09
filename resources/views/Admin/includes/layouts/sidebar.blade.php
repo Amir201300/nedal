@@ -104,6 +104,20 @@
                 </li>
 
                 <li class="sidebar-item">
+                    <a class="sidebar-link  waves-effect waves-dark" href="{{route('Sliders.index')}}" aria-expanded="false">
+                        <i class="fa fa-images"></i>
+                        <span class="hide-menu">صور السلايدرز </span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link  waves-effect waves-dark" href="{{route('Lawyers.index')}}" aria-expanded="false">
+                        <i class="fa fa-balance-scale"></i>
+                        <span class="hide-menu">المحامون و المستشارون </span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
                     <a class="sidebar-link  waves-effect waves-dark" href="{{route('Contact_us.index')}}" aria-expanded="false">
                         <i class="fa fa-phone"></i>
                         <span class="hide-menu">تواصل معنا</span>

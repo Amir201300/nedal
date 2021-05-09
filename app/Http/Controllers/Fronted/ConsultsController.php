@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Fronted;
 
 use App\Interfaces\UserInterface;
+use App\Models\Services;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator,Auth,Artisan,Hash,File,Crypt;
@@ -18,7 +19,8 @@ class ConsultsController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function requestConsults(){
-        return view('Fronted.Consults.consults');
+        $service = Services::get();
+        return view('Fronted.Consults.consults',compact('service'));
     }
 
     /**
@@ -33,9 +35,9 @@ class ConsultsController extends Controller
         }
         $Consults = new Consults();
         $Consults->name=$request->name;
-        $Consults->phone=$request->phone;
         $Consults->email=$request->email;
         $Consults->topic=$request->topic;
+        $Consults->type=$request->type;
         $Consults->save();
         $msg= 'شكرا لك,سيتم التواصل معكم في اقرب وقت ممكن';
         return response()->json(['status'=>1,'message'=>$msg]);

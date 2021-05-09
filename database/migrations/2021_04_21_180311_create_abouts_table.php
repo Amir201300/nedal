@@ -20,6 +20,9 @@ class CreateAboutsTable extends Migration
             $table->string('address')->nullable();
             $table->text('about_office')->nullable();
             $table->text('about_office_en')->nullable();
+            $table->text('our_vision')->nullable();
+            $table->text('our_vision_en')->nullable();
+            $table->text('about_nedal')->nullable();
             $table->timestamps();
         });
     }

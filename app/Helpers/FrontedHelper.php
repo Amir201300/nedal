@@ -32,6 +32,7 @@ function contact_us(){
     return \App\Models\Contact_us::first();
 }
 
+
 /**
  * @param $limit
  * @return mixed

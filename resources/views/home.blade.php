@@ -9,4 +9,5 @@
     @include('Fronted.GeneralPages.homeAbout')
     @include('Fronted.Services.homeServices')
     @include('Fronted.Consults.homeConsults')
+    @include('Fronted.GeneralPages.lawyers')
 @endsection

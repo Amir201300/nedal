@@ -33,8 +33,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
     /**contact_us*/
     Route::get('/contact_us', 'Contact_usController@contact_us')->name('contact_us.contact_us');
 
+    /** services */
+    Route::get('/allServices', 'ServicesController@allServices')->name('services.allServices');
+    Route::get('/singleService/{id}', 'ServicesController@singleService')->name('services.singleService');
+
     /**blog*/
     Route::get('/allBlogs', 'BlogsController@allBlogs')->name('blog.allBlogs');
     Route::get('/singleBlog/{id}', 'BlogsController@singleBlog')->name('blog.singleBlog');
-    Route::get('/singleService/{id}', 'BlogsController@singleService')->name('service.singleService');
 });
